@@ -1,0 +1,33 @@
+{
+  "name": "au-model",
+  "version": "0.1.0",
+  "description": "data modeler with validation, deserialization, and serialization functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/test-runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joebartels/au-model.git"
+  },
+  "keywords": [
+    "model",
+    "'data",
+    "model'",
+    "'serializer'",
+    "'deserializer'",
+    "'validator'",
+    "schema"
+  ],
+  "author": "Joseph Bartels (http://joebartels.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joebartels/au-model/issues"
+  },
+  "homepage": "https://github.com/joebartels/au-model#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "glob": "7.1.2",
+    "mocha": "4.0.1"
+  }
+}
