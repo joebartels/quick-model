@@ -14,7 +14,8 @@ module.exports = {
     'node': true
   },
   globals: {
-
+    'it': '1',
+    'describe': '1'
   },
   rules: {
     'arrow-parens': ['error', 'as-needed'],
@@ -47,6 +48,6 @@ module.exports = {
     }],
     'camelcase': 'error',
     'no-eval': 'error',
-    'one-var': 'error'
+    'one-var': 'off'
   }
 };
