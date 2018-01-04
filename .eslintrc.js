@@ -11,7 +11,8 @@ module.exports = {
  ],
   env: {
     'browser': false,
-    'node': true
+    'node': true,
+    'es6': true
   },
   globals: {
     'it': '1',
