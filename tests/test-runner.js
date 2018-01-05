@@ -5,7 +5,7 @@ const Mocha = require('mocha');
 
 const arg = process.argv[2];
 const grep = process.argv[3];
-const root = 'lib';
+const dirs = ['lib', 'utils'];
 
 const mochaOptions = {
   retport: 'spec'
@@ -20,16 +20,16 @@ const mocha = new Mocha(mochaOptions);
 function addFiles(mocha, files) {
   console.log(`testing file paths: ${files}`);
 
-  glob.sync(files).forEach(mocha.addFile.bind(mocha));
+  glob.sync(`{${files}}`).forEach(mocha.addFile.bind(mocha));
 }
 
 if (arg === 'all') {
-  addFiles(mocha, `${root}/**/*-test.js`);
-  addFiles(mocha, `${root}/**/*-slow.js`);
+  addFiles(mocha, dirs.map(dir => `${dir}/**/*-test.js`).join(','));
+  addFiles(mocha, dirs.map(dir => `${dir}/**/*-slow.js`).join(','));
 } else if (arg) {
   addFiles(mocha, arg);
 } else {
-  addFiles(mocha, `${root}/**/*-test.js`);
+  addFiles(mocha, dirs.map(dir => `${dir}/**/*-test.js`).join(','));
 }
 
 mocha.run(function(failures) {
