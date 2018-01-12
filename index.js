@@ -1,5 +1,9 @@
 module.exports = {
   Model: require('./lib/model'),
 
-  Transforms: require('./lib/transforms')
+  Serializer: require('./lib/serializer'),
+
+  Transforms: require('./lib/transforms'),
+
+  utils: require('./utils')
 };

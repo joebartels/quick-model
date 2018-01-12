@@ -2,9 +2,9 @@
   @method mapCompact
   @param {Array} array
   @param {Function} fn map function
-  @param {...Mixed} additional args to pass to map function
+  @public
 */
-function mapCompact(array, mapFn) {
+module.exports.mapCompact = function mapCompact(array, mapFn) {
   if (!Array.isArray(array)) {
     return [];
   }
@@ -22,6 +22,4 @@ function mapCompact(array, mapFn) {
   }
 
   return list;
-}
-
-module.exports = mapCompact;
+};
