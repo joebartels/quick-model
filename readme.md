@@ -7,7 +7,7 @@ Mapping data from A to B.
 
 E.g. your database query returns snake\_cased keys and embedded relationships but you want to send it to the client with camelCase keys and sideloaded relationships. quick-model can do that.  
 
-Another usecase is a client sends data to your server in a client-friendly format and you need to 'deserialize' it into yet another format and insert it into some 3rd party database like a SalesForce table with a _wacky_ schema.
+Another usecase is a client sends data to your server in a client-friendly format and you need to 'deserialize' it into yet another format and insert it into some 3rd party database like a SalesForce table with a `wacky__c` schema.
 
 ## Quick install:
 ```bash
