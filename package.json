@@ -14,7 +14,7 @@
     "model",
     "data model",
     "serializer",
-    "data serializer"
+    "data serializer",
     "deserializer",
     "data deserializer",
     "validator",
