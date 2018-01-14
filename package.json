@@ -1,7 +1,7 @@
 {
-  "name": "au-model",
+  "name": "quick-model",
   "version": "0.1.0",
-  "description": "data modeler with validation, deserialization, and serialization functionality",
+  "description": "data modeling with serialization",
   "main": "index.js",
   "scripts": {
     "test": "node tests/test-runner.js"
@@ -12,19 +12,21 @@
   },
   "keywords": [
     "model",
-    "'data",
-    "model'",
-    "'serializer'",
-    "'deserializer'",
-    "'validator'",
+    "data model",
+    "serializer",
+    "data serializer"
+    "deserializer",
+    "data deserializer",
+    "validator",
+    "data validator",
     "schema"
   ],
   "author": "Joseph Bartels (http://joebartels.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joebartels/au-model/issues"
+    "url": "https://github.com/joebartels/quick-model/issues"
   },
-  "homepage": "https://github.com/joebartels/au-model#readme",
+  "homepage": "https://github.com/joebartels/quick-model#readme",
   "devDependencies": {
     "chai": "4.1.2",
     "glob": "7.1.2",
