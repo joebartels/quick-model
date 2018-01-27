@@ -31,6 +31,7 @@ module.exports = {
       'SwitchCase': 1,
       'MemberExpression': 'off'
     }],
+    'semi-style': ['error', 'last'],
     'brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
     'max-statements-per-line': [2, { 'max': 2 }],
     'operator-linebreak': ['error', 'after'],
