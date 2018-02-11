@@ -16,7 +16,7 @@ npm install quick-model
 
 ## Quick model setup:
 ```js
-const { 
+const {
   Model,
   Transforms
 } = require('quick-model');
@@ -26,7 +26,7 @@ const {
   one
 } = Model;
 
-const { 
+const {
   stringTransform
 } = Transforms;
 
@@ -48,7 +48,7 @@ const book = await db.books.findByTitle('foundation');
 console.log(book);
 // {
 //   book_title: 'Foundation',
-//   book_author: { 
+//   book_author: {
 //     full_name: 'Isaac Asimov'
 //   }
 // }
@@ -91,14 +91,14 @@ const bookSerializer = new Serializer({
 
     return `book_${name}`;
   },
-  
+
   keyForNonSerializedRelationship(relationship) {
     const { name } = relationship;
-    
+
     if (name === 'author') {
       return 'book_author';
     }
-    
+
     return name;
   }
 });
@@ -108,7 +108,7 @@ It will properly extract the fields from the raw data and , by default, return a
 ```js
 bookSerializer.serialize({
   book_title: 'Foundation',
-  book_author: { 
+  book_author: {
     full_name: 'Isaac Asimov'
   }
 });
@@ -155,8 +155,10 @@ deepAssign({ serializer: { foo: bar } }, { serializer: { baz: 'boo' } })
 }
 ```
 - [ ] in each directory, combine tests for that directory and place in tests/ directory relative to where each test currently is
+- [x] split deserialize, serialize, and normalize functionality into separate mixins
+- [x] re-organize serializer tests into the appropriate mixins/tests/\*-test.js file
+- [x] { include: [], exclude: [] } options support during serialize, deserialize, and normalize
 - [x] serializer.serialize/deserialize should accept a hash of 3rd party serializers in the event of embedded relationships. So that serializing an embedded relationship can use the correct serializer.
+- [x] serializer.normalize
+
 - [ ] accept hash of filter functions that can be applied to attributes or relationships.e.g. { filters: { password(x) { return x.replace('.+', '\*') } } }
-- [ ] add a Validator class
-- [ ] validator.validate should accept a hash of validators so that validating embedded relationships can use the correct validator
-- [ ] research a good format for return value of validate() (possibly an array of error objects)

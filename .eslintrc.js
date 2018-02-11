@@ -15,8 +15,9 @@ module.exports = {
     'es6': true
   },
   globals: {
-    'it': '1',
-    'describe': '1'
+    'it': 'off',
+    'describe': 'off',
+    'beforeEach': 'off'
   },
   rules: {
     'arrow-parens': ['error', 'as-needed'],

@@ -5,5 +5,7 @@ module.exports = {
 
   Transforms: require('./lib/transforms'),
 
+  Validator: require('./lib/validator'),
+
   utils: require('./utils')
 };
