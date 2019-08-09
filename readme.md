@@ -16,28 +16,16 @@ npm install quick-model
 
 ## Quick model setup:
 ```js
-const {
-  Model,
-  Transforms
-} = require('quick-model');
-
-const {
-  attr,
-  one
-} = Model;
-
-const {
-  stringTransform
-} = Transforms;
+const { Model, Transforms } = require('quick-model');
 
 const personModel = new Model({
-  name: attr(stringTransform)
+  name: Model.attr(Transforms.stringTransform)
 });
 
 const bookModel = new Model({
-  title: attr(stringTransform),
+  title: Model.attr(Transforms.stringTransform),
 
-  author: one(personModel)
+  author: Model.one(personModel)
 });
 ```
 
